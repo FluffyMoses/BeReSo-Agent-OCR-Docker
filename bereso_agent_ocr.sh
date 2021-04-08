@@ -9,7 +9,7 @@
 # ###################################
 
 
-# Config - example - variables set via Docker environment variables
+# Config - example - variables set via Docker environment variables 
 #BERESO_URL="http://bereso/" # URL to the BeReSo installation
 #BERESO_PASSWORD="PASSWORD_FOR_OCR_AGENT" # Password for the OCR agent
 #LANGUAGE=deu # Set tesseract processing language

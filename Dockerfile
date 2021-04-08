@@ -2,7 +2,7 @@ FROM debian:10
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install Nginx, php and all needed php modules
+# Install Nginx, php and all needed php modules 
 RUN apt-get update \
   && apt-get install -y tesseract-ocr tesseract-ocr-deu curl imagemagick locales
 

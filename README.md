@@ -31,5 +31,5 @@ docker run \
 -e 'BERESO_URL=http://bereso/' \ 
 -e 'INTERVAL=3600' \
 -e 'LANGUAGE=eng' \ 
-FlyffyMoses/BeReSo-Agent-OCR
+fluffymoses/bereso-agent-ocr
 ```
