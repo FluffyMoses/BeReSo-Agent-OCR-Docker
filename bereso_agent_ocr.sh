@@ -5,7 +5,7 @@
 # BEst REcipe SOftware
 # ###################################
 # BeReSo OCR Agent
-# Version 1.4
+# Version 1.5
 # ###################################
 
 
@@ -51,10 +51,10 @@ for i in ${OCRITEM[@]}; do
         curl -o image $OCRITEMURL > /dev/null
 
         # optimize and convert (input is png or jpg)
-        convert image -colorspace Gray -units pixelsperinch -density 300 -depth 8 imageoptimized
+        convert image -colorspace Gray -units pixelsperinch -density 300 -depth 8 imageoptimized > /dev/null
 
         # start OCR using tesseract
-        tesseract -l $LANGUAGE imageoptimized ocr # start ocr with language $LANGUAGE and save the output in ocr.txt
+        tesseract -l $LANGUAGE imageoptimized ocr > /dev/null # start ocr with language $LANGUAGE and save the output in ocr.txt
 
         cat ocr.txt >> $OCRTEMP$OCRITEMID
 
