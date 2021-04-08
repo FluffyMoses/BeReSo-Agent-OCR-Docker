@@ -13,6 +13,6 @@ do
 	/bereso_agent_ocr/bereso_agent_ocr.sh 
 	echo "Waiting $INTERVAL seconds..."
 
-	# sleep for $INTERVAL seconds
+	# sleep for $INTERVAL seconds 
 	sleep $INTERVAL;
 done
