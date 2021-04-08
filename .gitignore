@@ -1,0 +1,11 @@
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Visual Studio
+.vs/
+
+# Git
+.git/
