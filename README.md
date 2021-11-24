@@ -9,7 +9,7 @@ A Docker image is build with the needed software to run the agent script.
 
 At first you have to enable OCR and set a strong OCR agent password in your BeReSo admincenter.
 
-Then get the container from Dockerhub, configure and run the agent.
+Then get the container from Github Containers, configure and run the agent.
 
 <b>Environment variables:</b>
 ```
@@ -31,5 +31,5 @@ docker run \
 -e 'BERESO_URL=http://bereso/' \ 
 -e 'INTERVAL=3600' \
 -e 'LANGUAGE=eng' \ 
-fluffymoses/bereso-agent-ocr
+ ghcr.io/fluffymoses/bereso-agent-ocr
 ```
