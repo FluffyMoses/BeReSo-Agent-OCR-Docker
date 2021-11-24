@@ -26,10 +26,11 @@ docker run \
 -d \
 --name bereso_docker_ocr \
 --restart=unless-stopped \
--e "TZ=Europe/Berlin" \
 -e 'BERESO_PASSWORD=PASSWORD_FOR_OCR_AGENT' \
--e 'BERESO_URL=http://bereso/' \ 
+-e 'BERESO_URL=http://bereso/' \
 -e 'INTERVAL=3600' \
--e 'LANGUAGE=eng' \ 
- ghcr.io/fluffymoses/bereso-agent-ocr
+-e 'LANGUAGE=deu'  \
+-e "TZ=Europe/Berlin" \
+ghcr.io/fluffymoses/bereso-agent-ocr-docker:latest
+
 ```
