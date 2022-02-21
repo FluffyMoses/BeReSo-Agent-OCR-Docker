@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install Nginx, php and all needed php modules 
 RUN apt-get update \
-  && apt-get install -y tesseract-ocr tesseract-ocr-deu curl imagemagick locales
+  && apt-get install -y tesseract-ocr tesseract-ocr-deu curl imagemagick locales nano
 
 # Create dirs
 RUN mkdir /bereso_agent_ocr
