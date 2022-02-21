@@ -16,6 +16,7 @@
 
 export TESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/tessdata/ # Tesseract tessdata folder
 
+WORKDIR=/bereso_agent_ocr
 LOGPATH=/bereso_agent_ocr/bereso_agent_ocr.log
 OCRTEMP=/bereso_agent_ocr/temp/
 
@@ -48,20 +49,17 @@ for i in ${OCRITEM[@]}; do
         OCRITEMURL="${OCRITEMSPLIT[1]}"
 
         # load the image
-        curl -o image $OCRITEMURL > /dev/null
+        curl -o $WORKDIR/image $OCRITEMURL 
 
         # optimize and convert (input is png or jpg)
-        convert image -colorspace Gray -units pixelsperinch -density 300 -depth 8 imageoptimized > /dev/null
+        convert $WORKDIR/image -colorspace Gray -units pixelsperinch -density 300 -depth 8 $WORKDIR/imageoptimized
 
         # start OCR using tesseract
-        tesseract -l $LANGUAGE imageoptimized ocr > /dev/null # start ocr with language $LANGUAGE and save the output in ocr.txt
-
-        cat ocr.txt >> $OCRTEMP$OCRITEMID
+        tesseract -l $LANGUAGE $WORKDIR/imageoptimized stdout >> $OCRTEMP$OCRITEMID # start ocr with language $LANGUAGE and save the output in ocr.txt
 
         # delete the temp files
-        rm image
-        rm imageoptimized
-        rm ocr.txt
+        rm $WORKDIR/image
+        rm $WORKDIR/imageoptimized
 done
 
 # Upload the files
