@@ -18,7 +18,7 @@ BERSO_URL - the URL of the BeReSo installation
 INTERVAL - time between checks for new images
 LANGUAGE - Language used by tesseract - installed in this docker image: eng, deu
 ```
-
+ 
 <b>Run the container:</b>
 ```
 # BeReSo-Agent-OCR
