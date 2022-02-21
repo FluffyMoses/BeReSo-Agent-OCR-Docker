@@ -1,4 +1,4 @@
-FROM debian:10
+FROM debian:latest
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -16,6 +16,12 @@ RUN chmod +x /bereso_agent_ocr/bereso_agent_ocr.sh
 # Copy entrypoint script
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
+
+# Create BeReSo agent user
+RUN useradd -ms /bin/bash --uid 1010 beresoagent
+RUN chown -R beresoagent /bereso_agent_ocr
+
+USER beresoagent
 
 # Entrypoint script
 ENTRYPOINT ["entrypoint.sh"]

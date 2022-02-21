@@ -31,6 +31,7 @@ docker run \
 -e 'INTERVAL=3600' \
 -e 'LANGUAGE=deu'  \
 -e "TZ=Europe/Berlin" \
+--user 1010:1010  \
 ghcr.io/fluffymoses/bereso-agent-ocr-docker:latest
 
 ```

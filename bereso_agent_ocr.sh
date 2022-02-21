@@ -5,7 +5,7 @@
 # BEst REcipe SOftware
 # ###################################
 # BeReSo OCR Agent
-# Version 1.5
+# Version 1.6
 # ###################################
 
 
