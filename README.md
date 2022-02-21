@@ -24,7 +24,7 @@ LANGUAGE - Language used by tesseract - installed in this docker image: eng, deu
 # BeReSo-Agent-OCR
 docker run \
 -d \
---name bereso_docker_ocr \
+--name bereso_agent_ocr \
 --restart=unless-stopped \
 -e 'BERESO_PASSWORD=PASSWORD_FOR_OCR_AGENT' \
 -e 'BERESO_URL=http://bereso/' \
